@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nicolas | Portfólio</title>
+
+    <style>
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #74c0fc,
+                #4dabf7,
+                #7950f2
+            );
+
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            padding: 30px 15px;
+        }
+
+
+        /* =========================
+           CARTÃO PRINCIPAL
+        ========================== */
+
+        .bio {
+            width: 100%;
+            max-width: 600px;
+
+            background: rgba(20, 10, 70, 0.92);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.3);
+
+            backdrop-filter: blur(10px);
+
+            animation: aparecer 1s ease;
+        }
+
+
+        /* =========================
+           TÍTULOS
+        ========================== */
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+
+            color: #ffffff;
+        }
+
+        h2 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+
+            font-size: 1.4rem;
+            color: #dbe4ff;
+        }
+
+        p {
+            margin-top: 15px;
+
+            font-size: 1.1rem;
+            line-height: 1.6;
+
+            color: #e9ecef;
+        }
+
+
+        /* =========================
+           FOTO
+        ========================== */
+
+        .foto {
+            width: 200px;
+            height: 200px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+            border: 6px solid white;
+
+            box-shadow:
+                0 0 0 6px rgba(121, 80, 242, 0.5),
+                0 10px 30px rgba(0, 0, 0, 0.4);
+
+            transition: 0.4s;
+        }
+
+        .foto:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           LISTAS
+        ========================== */
+
+        ul {
+            list-style: none;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        li {
+            width: 100%;
+        }
+
+        li a {
+            display: block;
+
+            padding: 13px 15px;
+
+            border-radius: 12px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            color: white;
+            text-decoration: none;
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            transition: 0.3s;
+        }
+
+        li a:hover {
+            background: #7950f2;
+
+            transform: translateX(5px);
+
+            border-color: rgba(255, 255, 255, 0.3);
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =========================
+           REDES SOCIAIS
+        ========================== */
+
+        .redes {
+            margin-top: 35px;
+
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .redes a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 70px;
+            height: 70px;
+
+            border-radius: 15px;
+
+            background: rgba(255, 255, 255, 0.1);
+
+            transition: 0.3s;
+        }
+
+        .logos {
+            width: 45px;
+            height: 45px;
+
+            border: none;
+            border-radius: 0;
+
+            object-fit: contain;
+
+            transition: 0.3s;
+        }
+
+        .redes a:hover {
+            background: white;
+
+            transform: translateY(-7px);
+        }
+
+        .redes a:hover .logos {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           ANIMAÇÃO
+        ========================== */
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .bio {
+                padding: 25px 18px;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .foto {
+                width: 160px;
+                height: 160px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="bio">
+
+        <!-- APRESENTAÇÃO -->
+
+        <h1>Olá, sou Nicolas 👋</h1>
+
+        <img
+            class="foto"
+            src="Captura de tela 2026-08-12 083839.png"
+            alt="Foto de Nicolas"
+        >
+
+        <p>
+            Tenho 16 anos e gosto de programação,
+            tecnologia e desenvolvimento de projetos.
+        </p>
+
+
+        <!-- ESPECIALIDADES -->
+
+        <h2>💡 Minhas Especialidades</h2>
+
+        <ul>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/results?search_query=playlist+l%C3%B3gica+de+programa%C3%A7%C3%A3o"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🧠 Bom de raciocínio rápido
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/playlist?list=PL_qIrDN190UX3KF-unB-olU2TWTlKO4x8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    💬 Boa comunicação
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/results?search_query=playlist+trabalho+em+equipe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🤝 Trabalho em equipe
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/results?search_query=playlist+proatividade+desenvolvimento+pessoal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🚀 Proatividade
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- TEMPO LIVRE -->
+
+        <h2>🎮 Atividades em Tempo Livre</h2>
+
+        <ul>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/results?search_query=playlist+filmes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🎬 Assistir filmes
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/results?search_query=playlist+m%C3%BAsicas"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🎵 Ouvir músicas
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/results?search_query=playlist+gameplay+jogos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🎮 Jogar
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/results?search_query=playlist+programa%C3%A7%C3%A3o+para+iniciantes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    💻 Programar
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- REDES SOCIAIS -->
+
+        <div class="redes">
+
+            <a
+                href="https://github.com/nicskxx"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Meu GitHub"
+            >
+                <img
+                    class="logos"
+                    src="github.png"
+                    alt="GitHub"
+                >
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/nicolas-campos-barboza-85a562409/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Meu LinkedIn"
+            >
+                <img
+                    class="logos"
+                    src="linkedin.png"
+                    alt="LinkedIn"
+                >
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
